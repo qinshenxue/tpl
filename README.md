@@ -37,6 +37,7 @@
 ```
 document.getElementById('output').innerHTML = tpl('tpl-example',{list:[1,2,3]});
 ```
+
 ###tpl.compile(source[,cacheId])
 - source 要编译的模板内容
 - [非必须]cacheId 缓存的id
@@ -45,8 +46,10 @@ document.getElementById('output').innerHTML = tpl('tpl-example',{list:[1,2,3]});
 var render=tpl.compile('<%=$data.prop%>');
 render({prop:'hello world'});
 ```
+
 ###tpl.render(tplId,data)
 同tpl(tplId,data)
+
 ### tpl.tool(toolName,toolFunction) 添加工具方法，在模板中可以调用
 - toolName 工具方法名
 - toolFunction 工具方法
