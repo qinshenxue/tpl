@@ -1,7 +1,13 @@
 var gulp = require('gulp'),
     rename = require("gulp-rename"),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+   jshint = require('gulp-jshint');
 
+gulp.task('jshint', function() {
+    return gulp.src('src/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+});
 gulp.task('js', function () {
     return gulp.src('src/*.js')
         .pipe(uglify())
@@ -10,4 +16,4 @@ gulp.task('js', function () {
 });
 
 
-gulp.task('default', ['js']);
+gulp.task('default', ['jshint','js']);

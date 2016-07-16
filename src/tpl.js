@@ -1,4 +1,3 @@
-;
 (function (window) {
 
     function tpl(tplId, data) {
