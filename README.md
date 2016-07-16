@@ -3,7 +3,9 @@
 ## 语法
 
 ### 输出属性值
-`<%= $data.propName %>`
+```
+<%= $data.propName %>
+```
 
 ### js原生语法
 ```
@@ -23,8 +25,8 @@
 
 ###tpl(tplId,data)
 . tplId  存放模板的容器id
-. data   编译模板的数据
-返回渲染的html
+. data   渲染模板的数据
+返回渲染结果
 ###tpl.compile(source[,cacheId])
 . source 要编译的模板内容
 . [非必须]cacheId 缓存的id
