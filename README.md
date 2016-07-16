@@ -33,6 +33,6 @@
 返回渲染函数
 ###tpl.render(tplId,data)
 同tpl(tplId,data)
-### tpl.tool(toolName,toolFunction)
+### tpl.tool(toolName,toolFunction) 添加工具方法，在模板中可以调用
 . toolName 工具方法名
 . toolFunction 工具方法
