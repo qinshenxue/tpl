@@ -8,7 +8,9 @@
 
 ### 输出属性值
 ```
-<%= $data.propName %>
+<div> <%= $data.propName %> </div>
+<div> <%= Math.random() %> </div>
+<div> <%= $tools.formatDate($data.date) %> </div>
 ```
 
 ### js原生语法
@@ -20,8 +22,9 @@
 <% } %>
 ```
 ```
-<% for(var i=0,j=$data.list.length;i<j;i++){ %>
-    <div><%= $data.list[i]%></div>
+<% var list=$data.list; %>
+<% for(var i=0,j=list.length;i<j;i++){ %>
+    <div><%= list[i]%></div>
 <% } %>
 ```
 
