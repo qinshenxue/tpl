@@ -1,0 +1,26 @@
+{
+  "name": "tpl",
+  "version": "1.0.0",
+  "description": "简单小巧js模板引擎，支持js原生语法",
+  "homepage": "http://tpl.qinshenxue.com",
+  "repository": {
+    "type": "git",
+    "url": "https://git.oschina.net/qinshenxue/tpl"
+  },
+  "main":"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "qinshenxue",
+    "email": "qinshenxue@qinshenxue.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-clean-css": "^2.0.2",
+    "ftp":"^0.3.10"
+  }
+}

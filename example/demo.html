@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="output"></div>
+<script id="tpl-example" type="text/html">
+    <div> <%= $data.name %></div>
+    <div> <%= $tools.formatDate($data.date) %></div>
+    <% for(var i=0,j=$data.length;i<j;i++){ %>
+            <div><%= $data[i]%></div>
+    <% } %>
+</script>
+<script src="../src/tpl.js"></script>
+
+<script>
+
+    tpl.tool('formatDate', function (date) {
+        var d = new Date(date);
+        return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+    });
+
+    var example = {
+        name: 'example',
+        list: [],
+        date: new Date().getTime()
+    };
+    for (var i = 0; i < 10; i++) {
+        example.list.push((Math.random() * 100).toFixed(0));
+    }
+
+    tpl.compile(document.getElementById('tpl-example').innerHTML,'tpl-example');
+    document.getElementById('output').innerHTML = tpl('tpl-example', example);
+
+</script>
+
+</body>
+</html>

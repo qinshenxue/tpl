@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<button onclick="startTest();">开始测试</button>
+<div id="test-result">
+
+</div>
+<script id="tpl" type="text/tmpl">
+<ul>
+    <% for (var i = 0, l = $data.list.length; i < l; i ++) { %>
+        <li>用户: <%= $data.list[i].user%>/ 网站：<%= $data.list[i].site%></li>
+    <% } %>
+</ul>
+
+
+</script>
+<script src="../src/tpl.js"></script>
+<script>
+    // 数据量
+    var length = 100;
+    // 渲染次数
+    var number = 10000;
+    var data = {
+        list: []
+    };
+    for (var i = 0; i < length; i++) {
+        data.list.push({
+            index: i,
+            user: '<strong style="color:red">糖饼</strong>',
+            site: 'http://www.planeart.cn',
+            weibo: 'http://weibo.com/planeart',
+            QQweibo: 'http://t.qq.com/tangbin'
+        });
+    }
+
+
+    var Timer = function () {
+        this.startTime = +new Date;
+    };
+    Timer.prototype.stop = function () {
+        return +new Date - this.startTime;
+    };
+
+
+    function startTest() {
+        var time = new Timer;
+        var source = document.getElementById('tpl').innerHTML;
+        var fn = tpl.compile(source);
+        for (var i = 0; i < number; i++) {
+            fn(data);
+        }
+        var endTime = time.stop();
+        alert('渲染100条数据乘以10000次（1万）耗时：' + endTime + "毫秒");
+        document.getElementById('test-result').innerHTML += '<div>渲染100条数据乘以10000次（1万）耗时：' + endTime + '毫秒</div>';
+    }
+
+
+</script>
+</body>
+</html>
