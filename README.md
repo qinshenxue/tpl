@@ -34,6 +34,7 @@
 - tplId  存放模板的容器id
 - data   渲染模板的数据
 返回渲染结果
+
 ```
 document.getElementById('output').innerHTML = tpl('tpl-example',{list:[1,2,3]});
 ```
@@ -42,6 +43,7 @@ document.getElementById('output').innerHTML = tpl('tpl-example',{list:[1,2,3]});
 - source 要编译的模板内容
 - [非必须]cacheId 缓存的id
 返回渲染函数
+
 ```
 var render=tpl.compile('<%=$data.prop%>');
 render({prop:'hello world'});
@@ -53,6 +55,7 @@ render({prop:'hello world'});
 ### tpl.tool(toolName,toolFunction) 添加工具方法，在模板中可以调用
 - toolName 工具方法名
 - toolFunction 工具方法
+
 ```
 tpl.tool('formatDate', function (date) {
         var d = new Date(date);
