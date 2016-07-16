@@ -23,4 +23,11 @@
 
 ###tpl(tplId,data)
 . tplId  存放模板的容器id
-. data   渲染模板的数据
+. data   编译模板的数据
+返回编译后的html字符串
+###tpl.compile(source[,cacheId])
+. source 要编译的模板内容
+. cacheId 缓存的id
+返回function (data){}
+###tpl.html(tplId,data)
+同tpl(tplId,data)
