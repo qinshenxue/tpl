@@ -56,7 +56,7 @@ render({prop:'hello world'});
 - toolName 工具方法名
 - toolFunction 工具方法
 
-<div> <%= $tools.formatDate($data.date) %> </div>
+<div> <%= $tools.formatDate($data.date) %> </body>
 ```
 tpl.tool('formatDate', function (date) {
         var d = new Date(date);
