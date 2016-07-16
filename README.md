@@ -22,5 +22,5 @@
 ## API
 
 ###tpl(tplId,data)
-. @param  {string}  tplId     存放模板的容器id
-. @param  {object}  data     渲染模板的数据
+. tplId  存放模板的容器id
+. data   渲染模板的数据
