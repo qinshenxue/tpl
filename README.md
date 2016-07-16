@@ -27,7 +27,7 @@
 返回编译后的html字符串
 ###tpl.compile(source[,cacheId])
 . source 要编译的模板内容
-. cacheId 缓存的id
+. [非必须]cacheId 缓存的id
 返回function (data){}
 ###tpl.html(tplId,data)
 同tpl(tplId,data)
