@@ -62,5 +62,8 @@ tpl.tool('formatDate', function (date) {
         return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
     });
 
+```
+模板内使用
+```
 <div> <%= $tools.formatDate($data.date) %> </div>
 ```
