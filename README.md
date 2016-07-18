@@ -1,4 +1,4 @@
-#简单js模板引擎，支持原生js语法，压缩版不到1k 
+##简单小巧，性能出众的js模板引擎，支持原生js语法，压缩版不到1k 
 ![](readme/speed.png)
 ![](readme/size.png)
 
