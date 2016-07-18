@@ -8,24 +8,24 @@
 
 ### 输出属性值
 ```
-<div> <%= $data.propName %> </div>
-<div> <%= Math.random() %> </div>
-<div> <%= $tools.formatDate($data.date) %> </div>
+<div> {{= $data.propName }} </div>
+<div> {{= Math.random() }} </div>
+<div> {{= $tools.formatDate($data.date) }} </div>
 ```
 
 ### js原生语法
 ```
-<% if( $data.really){ %>
+{{ if( $data.really){ }}
 <div>do sth...</div>
-<% }else{ %>
+{{ }else{ }}
 <div>do sth...</div>
-<% } %>
+{{ } }}
 ```
 ```
-<% var list=$data.list; %>
-<% for(var i=0,j=list.length;i<j;i++){ %>
-    <div><%= list[i]%></div>
-<% } %>
+{{ var list=$data.list; }}
+{{ for(var i=0,j=list.length;i<j;i++){ }}
+    <div>{{= list[i]}}</div>
+{{ } }}
 ```
 
 ## API
@@ -45,7 +45,7 @@ document.getElementById('output').innerHTML = tpl('tpl-example',{list:[1,2,3]});
 返回渲染函数
 
 ```
-var render=tpl.compile('<%=$data.prop%>');
+var render=tpl.compile('{{=$data.prop}}');
 render({prop:'hello world'});
 ```
 
@@ -65,5 +65,5 @@ tpl.tool('formatDate', function (date) {
 ```
 模板内使用
 ```
-<div> <%= $tools.formatDate($data.date) %> </div>
+<div> {{= $tools.formatDate($data.date) }} </div>
 ```
