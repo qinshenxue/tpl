@@ -14,14 +14,14 @@
 ```
 
 ### js原生语法
-```
+``` text
 {{ if( $data.really){ }}
 <div>do sth...</div>
 {{ }else{ }}
 <div>do sth...</div>
 {{ } }}
 ```
-```
+``` text
 {{ var list=$data.list; }}
 {{ for(var i=0,j=list.length;i<j;i++){ }}
     <div>{{= list[i]}}</div>
