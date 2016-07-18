@@ -12,9 +12,9 @@
 </div>
 <script id="tpl" type="text/tmpl">
 <ul>
-    <% for (var i = 0, l = $data.list.length; i < l; i ++) { %>
-        <li>用户: <%= $data.list[i].user%>/ 网站：<%= $data.list[i].site%></li>
-    <% } %>
+    {{ for (var i = 0, l = $data.list.length; i < l; i ++) { }}
+        <li>用户: {{= $data.list[i].user}}/ 网站：{{= $data.list[i].site}}</li>
+    {{ } }}
 </ul>
 
 

@@ -7,12 +7,12 @@
 <body>
 <div id="output"></div>
 <script id="tpl-example" type="text/html">
-    <div> <%= $data.name %></div>
-    <div> <%= $tools.formatDate($data.date) %></div>
-    <% var list=$data.list; %>
-    <% for(var i=0,j=list.length;i<j;i++){ %>
-            <div><%= list[i]%></div>
-    <% } %>
+    <div> {{= $data.name }}</div>
+    <div> {{= $tools.formatDate($data.date) }}</div>
+    {{ var list=$data.list; }}
+    {{ for(var i=0,j=list.length;i<j;i++){ }}
+            <div>{{= list[i]}}</div>
+    {{}}}
 </script>
 <script src="../src/tpl.js"></script>
 
