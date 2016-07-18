@@ -41,7 +41,7 @@
      *
      */
     tpl.compile = function (source, cacheId) {
-        var code = "console.log(this); var $tools=this.tools; var $out='" + source.replace(/[\r\n]/g, '').replace(/\{\{\s*=\s*(.+?)\}\}/g, "';$out+=$1;$out+='").replace(/\{\{(.+?)\}\}/g, "';$1$out+='") + "';return new String($out);";
+        var code = "var $tools=this.tools; var $out='" + source.replace(/[\r\n]/g, '').replace(/\{\{\s*=\s*(.+?)\}\}/g, "';$out+=$1;$out+='").replace(/\{\{(.+?)\}\}/g, "';$1$out+='") + "';return new String($out);";
         var Render = new Function('$data', code);
         Render.prototype.tools = this.tools;
         var render = function (data) {
